@@ -1,0 +1,49 @@
+/* Heading section */
+#heading {
+    background: rgb(143, 143, 235);
+    color: white;
+    padding: 20px;
+    text-transform: uppercase;
+}
+
+body {
+    
+    background: rgb(61, 58, 58) !important;
+}
+
+#heading h3, #heading h1{
+    padding: 0;
+    margin: 0;
+}
+
+
+/* Navbar Section */
+
+#nav{
+    background: white;
+    margin: 0;
+}
+
+#nav .container {
+    padding: 0 20%;
+}
+
+#nav.navbar-default .navbar-nav>li>a {    
+    color: rgb(114, 114, 240);
+}
+
+#attemptInfo {
+    margin-left: 120px;
+}
+
+
+/* Colors Section */
+
+#colorDisplay .color {
+    background: pink;
+    height: 150px;
+    width: 150px;
+    margin: 10px;
+    border-radius: 15px;    
+}
+
