@@ -16,24 +16,15 @@
         <h3>GUESSING GAME</h3>
     </div>
 
-    <nav class="navbar navbar-default" id="nav">
-        <div class="container">            
-            <ul class="nav navbar-nav">
-              <li id="newColors"><a href="#">NEW COLORS</a></li>
-              <li class="navbar-text" id="attemptInfo"> </li>
-            </ul>
-            
-           
+    <!-- attempt with div + buttons - rather than navbar -->
+    <div class = "container-fluid text-center" id ="nav">
+        <button class="btn btn-default" id="newColors">NEW COLORS</button>
+        <span id="attemptInfo">Goodluck!</span>
+        <button class="btn btn-default" id="easy">EASY</button>
+        <button class="btn btn-default active" id="hard">HARD</button>
+    </div>
 
-            <ul class="nav navbar-nav navbar-right">
-                <li id="easy"><a href="#">EASY</a></li>
-                <li class="active" id="hard"><a href="#">HARD</a></li>                
-            </ul>
-        </div>
-    </nav>
-
-
-    <div class = "container-fluid" id="colorDisplay">
+    <div class = "container-fluid text-center" id="colorDisplay">
 
         <div class="row col-md-offset-4 col-xs-offset-2">
                 <div class="col-xs-8 sm-2 color" id="color0"></div>   

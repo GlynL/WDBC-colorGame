@@ -19,28 +19,23 @@ body {
 
 /* Navbar Section */
 
-#nav{
+#nav {
     background: white;
     margin: 0;
 }
 
-#nav .container {
-    padding: 0 20%;
-}
-
-#nav.navbar-default .navbar-nav>li>a {    
-    color: rgb(114, 114, 240);
-}
-
 #attemptInfo {
-    margin-left: 120px;
+    padding: 30px;
 }
 
+
+#nav .btn {
+     color: rgb(114, 114, 240);
+}
 
 /* Colors Section */
 
 #colorDisplay .color {
-    background: pink;
     height: 150px;
     width: 150px;
     margin: 10px;
