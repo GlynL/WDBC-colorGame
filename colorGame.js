@@ -1,9 +1,10 @@
-//hello - i'm changin shit
-
 // global vars
 var newColors = document.querySelector("#newColors");
 //random color to guess
 var colorCorrect = 'rgb(' + (Math.floor(Math.random() * 256)) + ', ' + (Math.floor(Math.random() * 256)) + ', ' + (Math.floor(Math.random() * 256)) + ')';
+
+var hideEasy = document.querySelector("#hideEasy");
+
 
 // ---------- SETUP COLOR TILES ----------
 
@@ -11,7 +12,15 @@ function setupTiles(){
     //select all color tiles
     var colors = document.querySelectorAll(".color");
     //select random tile
-    var random = Math.round(Math.random() * 6);
+    var random = 0;
+
+    if(hideEasy.classList.contains("hidden")){
+        random = Math.round(Math.random() * 3);
+    }
+
+    else{
+        random = Math.round(Math.random() * 6);
+    }
     //heading for text change
     var colorHeading = document.querySelector("#heading h1");
 
@@ -84,7 +93,6 @@ for(let i =0; i <6; i++){
 
 var easy = document.querySelector("#easy");
 var hard = document.querySelector("#hard");
-var hideEasy = document.querySelector("#hideEasy");
 
 // listneers for buttons
 easy.addEventListener("click", difficulty);
@@ -92,19 +100,14 @@ hard.addEventListener("click", difficulty);
 
 // 
 function difficulty(){
-    // toggle button on/off
+    // toggle button on/off  
     easy.classList.toggle("active");
-    hard.classList.toggle("active");    
-
+    hard.classList.toggle("active");  
     //check if easy or hard layout and set
-    if(hideEasy.style.visibility === "visible" || hideEasy.style.visibility === ""){
-        hideEasy.style.visibility = "hidden";
-    }
+    hideEasy.classList.toggle("hidden");
 
-    else{
-        hideEasy.style.visibility = "visible";
-    }
+    setupTiles();
 }
 
 
-// write winning code for setting all visibilites to visible
+// write code for easy setup to only choose first 3 tiles --- blurghgh
